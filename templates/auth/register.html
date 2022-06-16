@@ -1,0 +1,57 @@
+{% extends 'base_auth.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+
+<div class="col-md-4"> </div>
+<div class="col-md-4">
+
+    <div class="card mt-5">
+        <div class="card-title py-2">
+           <h4 class="d-flex justify-content-center">Register for an account.</h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <form action="" method="post">
+                {% csrf_token %}
+
+                 <div class="form-group">
+                    <input type="text" name="username" id="usernameField" placeholder="username" class="form-control form-control-sm">
+
+                </div> <br>
+
+                <div class="form-group">
+                    <input type="email" name="email" id="emailField" placeholder="Email" class="form-control form-control-sm">
+
+                </div> <br>
+
+                <div class="form-group">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      class="form-control form-control-sm"
+                      id="passwordField"
+                    />
+                </div>
+                <div class="float-xl-end py-2"><small>SHOW</small></div> <br>
+                <input type="submit" value="Register" class="btn btn-block btn-primary submit-btn" />
+
+            </form>
+
+            </div>
+
+
+    </div>
+
+
+
+</div>
+<div class="col-md-4"> </div>
+
+</div>
+
+{% endblock %}
