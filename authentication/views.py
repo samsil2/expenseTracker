@@ -40,3 +40,17 @@ class EmailValidationView(View):
 class Registration(View):
     def get(self, request):
         return render(request, 'auth/register.html')
+
+    def post(self, request):
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+
+        messages.success(request, "success")
+        messages.warning(request, "warining")
+        messages.error(request, "error")
+        messages.info(request, "info")
+
+
+        return render(request, 'auth/register.html')
+
